@@ -12,7 +12,8 @@
 
 
 <!-- include ar.js for A-Frame -->
-<script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.2/aframe/build/aframe-ar.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+
 <body style='margin : 0px; overflow: hidden;'>
 
 <!--<a-scene>
@@ -50,14 +51,17 @@
 
 </script>
 
-<a-scene  vr-mode-ui="enabled: false" embedded arjs>
+<!--<a-scene  vr-mode-ui="enabled: false" embedded arjs>-->
+
+<a-scene vr-mode-ui="enabled: false" arjs='sourceType: webcam; debugUIEnabled: false;'>
+
 
     <!-- define your gltf asset -->
     <a-assets>
         <a-asset-item id="lidice" src="Assets/lidice.glb"></a-asset-item>
     </a-assets>
 
-    <a-marker-camera cursor="rayOrigin: mouse;" preset="hiro">
+    <a-marker cursor="rayOrigin: mouse;" preset="hiro">
 
         <!--        <a-entity
                         gltf-model="url(assets/7.gltf)" scale="0.1 0.1 0.1" >
@@ -78,7 +82,7 @@
                         obj-model="obj: url(assets/test.obj); mtl: url(assets/test.mtl)"  ">
                 </a-entity>-->
 
-    </a-marker-camera>
+    </a-marker>
     <a-entity camera mouse-cursor></a-entity>
 
 
